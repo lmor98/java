@@ -25,5 +25,9 @@ public class Fecha {
        private boolean esBisiesto() {
         return ((año % 4 == 0) && (año % 100 != 0) || (año % 400 == 0));
     }
+       public void setDia(int d) {
+       dia = d;
+    }
+
     
 }
