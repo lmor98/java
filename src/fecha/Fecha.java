@@ -28,6 +28,9 @@ public class Fecha {
     public void setMes(int m){
     
     }
+    public void setAño(int a){
+    
+    }
    
 
     
