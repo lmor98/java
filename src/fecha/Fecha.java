@@ -25,6 +25,9 @@ public class Fecha {
     public void setDia(int d) {
  
     }
+    public void setMes(int m){
+    
+    }
    
 
     
