@@ -8,11 +8,10 @@ public class Fecha {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        setDia(d);
-        setMes(m);
-        setAño(a);
-        fantasma();
     
+    }
+    private static boolean esBisiesto(){
+        return ((anyo % 4 == 0) && (anyo % 100 != 0) || (anyo % 400 == 0));
     }
     public static void setDia(int d) {
         dia = d;
@@ -22,6 +21,21 @@ public class Fecha {
     }
     public static void setAño(int a){
         anyo = a;
+    }
+    public static void asignarFecha(int d, int m, int a){
+        setDia(d);
+        setMes(m);
+        setAño(a);
+    }
+    public static int getDia(){
+        return dia;
+    }
+    public int getMes() {
+        return mes;
+    }
+
+    public int getAño() {
+        return anyo;
     }
     public static String fantasma(){
         boolean diaCorrecto, mesCorrecto, anyoCorrecto;
