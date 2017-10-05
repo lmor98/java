@@ -14,13 +14,6 @@ public class Fecha {
         dia = d;
         mes = m;  
         año = a;
-
-       /* if (!fechaCorrecta()) {
-            Calendar fechaSistema = Calendar.getInstance();
-            setDia(fechaSistema.get(Calendar.DAY_OF_MONTH));
-            setMes(fechaSistema.get(Calendar.MONTH));
-            setAño(fechaSistema.get(Calendar.YEAR));
-        }*/
     }
     public void setDia(int d) {
  
@@ -31,7 +24,7 @@ public class Fecha {
     public void setAño(int a){
     
     }
-   
-
+    public boolean fantasma(){
     
+    }
 }
