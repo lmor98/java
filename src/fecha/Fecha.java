@@ -1,30 +1,49 @@
 package fecha;
 public class Fecha {
-    private int dia;
-    private int mes;
-    private int año;
-
+    public static int dia;
+    public static int mes;
+    public static int anyo;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        setDia(d);
+        setMes(m);
+        setAño(a);
+        fantasma();
+    
     }
-    public Fecha(int d, int m, int a) {
+    public static void setDia(int d) {
         dia = d;
-        mes = m;  
-        año = a;
     }
-    public void setDia(int d) {
- 
+    public static void setMes(int m){
+        mes = m;
     }
-    public void setMes(int m){
-    
+    public static void setAño(int a){
+        anyo = a;
     }
-    public void setAño(int a){
-    
-    }
-    public boolean fantasma(){
-    
-    }
+    public static String fantasma(){
+        boolean diaCorrecto, mesCorrecto, anyoCorrecto;
+        anyoCorrecto = (anyo >0);
+        mesCorrecto = (mes >=1) && (mes <=12);
+        switch(mes){
+            case 2:
+                if(esBisiesto()){
+                    diaCorrecto = (dia >= 1 && dia <= 29);
+                }else{
+                    diaCorrecto = (dia >= 1 && dia <= 28);
+                }
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                diaCorrecto = (dia >= 1 && dia <= 30);
+                break;
+            default:
+                diaCorrecto = (dia >= 1 && dia <= 31);
+        }
+        return diaCorrecto + " / " + mesCorrecto + " / " + anyoCorrecto;
+    }  
 }
